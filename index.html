@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetics</title>
+    <script>
+        function add() {
+            var numone, numtwo, ans;
+            numone = parseInt(document.getElementById('num1').value);
+            numtwo = parseInt(document.getElementById('num2').value);
+            ans = numone + numtwo;
+            document.getElementById('add-ans').textContent = isNaN(ans) ? 'Invalid input' : ans;
+        }
+
+        function sub() {
+            var numOne, numTwo, Ans;
+            numOne = parseInt(document.getElementById('numOne').value);
+            numTwo = parseInt(document.getElementById('numTwo').value);
+            Ans = numOne - numTwo;
+            document.getElementById('sub-ans').textContent = isNaN(Ans) ? 'Invalid input' : Ans;
+        }
+
+        function mul() {
+            var numOnemul, numTwomul, MulAns;
+            numOnemul = parseInt(document.getElementById('numOneMul').value);
+            numTwomul = parseInt(document.getElementById('numTwoMul').value);
+            MulAns = numOnemul * numTwomul;
+            document.getElementById('mul-ans').textContent = isNaN(MulAns) ? 'Invalid input' : MulAns;
+        }
+
+        function div() {
+            var numOnediv, numTwodiv, divAns;
+            numOnediv = parseInt(document.getElementById('numOnediv').value);
+            numTwodiv = parseInt(document.getElementById('numTwodiv').value);
+            divAns = numOnediv / numTwodiv;
+            document.getElementById('div-ans').textContent = isNaN(divAns) ? 'Invalid input' : divAns;
+        }
+
+        function mod() {
+            var numOnemod, numTwomod, modAns;
+            numOnemod = parseInt(document.getElementById('numOnemod').value);
+            numTwomod = parseInt(document.getElementById('numTwomod').value);
+            modAns = numOnemod % numTwomod;
+            document.getElementById('mod-ans').textContent = isNaN(modAns) ? 'Invalid input' : modAns;
+        }
+    </script>
+    <style>
+        body {  
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: yellow;
+            padding: 30px;
+            width: 800px;
+            max-width: 800px;
+        }
+
+        .container h1 {
+            font-size: 3em;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .calculator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .calculator h2 {
+            margin: 10px 0;
+        }
+
+        .calculator input {
+            width: 200px;
+            height: 30px;
+            margin: 5px;
+            padding-left: 10px;
+        }
+
+        .calculator button {
+            cursor: pointer;
+            margin: 5px;
+            background-color: black;
+            color: white;
+            font-size: 1.4em;
+            border: none;
+            padding: 10px;
+        }
+
+        .calculator button:active {
+            background-color: red;
+        }
+
+        .calculator h3 {
+            margin: 10px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 250px;
+                padding: 20px;
+            }
+
+            .container h1 {
+                font-size: 2.5em;
+                margin-top: 10px;
+            }
+
+            .calculator input {
+                max-width: 250px;
+            }
+
+            .calculator button {
+                font-size: 1.2em;
+                padding: 8px;
+            }
+
+            .calculator h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Arithmetics</h1>
+        <div class="calculator">
+            <div class="operation">
+                <h2>Addition(+):</h2>
+                <input type="text" id="num1" placeholder="First Num">
+                <input type="text" id="num2" placeholder="Second Num">
+                <button onclick="add()">ADD</button>
+                <h3 id="add-ans"></h3>
+            </div>
+
+            <div class="operation">
+                <h2>Subtraction(-):</h2>
+                <input type="text" id="numOne" placeholder="First Num">
+                <input type="text" id="numTwo" placeholder="Second Num">
+                <button onclick="sub()">SUB</button>
+                <h3 id="sub-ans"></h3>
+            </div>
+
+            <div class="operation">
+                <h2>Multiply(*):</h2>
+                <input type="text" id="numOneMul" placeholder="First Num">
+                <input type="text" id="numTwoMul" placeholder="Second Num">
+                <button onclick="mul()">MUL</button>
+                <h3 id="mul-ans"></h3>
+            </div>
+
+            <div class="operation">
+                <h2>Divide(/):</h2>
+                <input type="text" id="numOnediv" placeholder="First Num">
+                <input type="text" id="numTwodiv" placeholder="Second Num">
+                <button onclick="div()">DIV</button>
+                <h3 id="div-ans"></h3>
+            </div>
+
+            <div class="operation">
+                <h2>Modulas(%):</h2>
+                <input type="text" id="numOnemod" placeholder="First Num">
+                <input type="text" id="numTwomod" placeholder="Second Num">
+                <button onclick="mod()">MOD</button>
+                <h3 id="mod-ans"></h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
